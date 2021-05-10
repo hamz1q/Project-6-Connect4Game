@@ -1,0 +1,95 @@
+# Hamza Qureshi Testing Script
+" if the user chooses player vs player then this function will determine whose turn it is "
+
+
+def player_vs_player(move_1, move_2):
+    return None
+
+
+
+def test_player_vs_player():
+    move_1 = int(input('Move: '))
+    move_2 = int(input('Move: '))
+    # while move_1 is selected, player 2 should not be allowed to enter something
+    while move_1:
+        if move_2:
+            print('Failed')
+        else:
+            print('Passed')
+    # tests to ensure the turns are not the same
+    if move_1 == move_2:
+        print('Fail')
+    else:
+        print('Passed')
+
+    # test to avoid forbidden postion
+    if move_1 == '*' or move_2 == '*':
+        print('Failed')
+    else:
+        print('Passed')
+
+" if the user chooses player vs computer then this function will determine whose turn it is "
+
+def player_vs_computer(player_move, computer_move):
+    return None
+
+
+def test_player_vs_computer():
+    from random import randint
+    computer_move = randint
+    player_move = int(input('Move: '))
+
+    # test randint function
+    # test player move and ranint not equal
+    # test to avoid forbidden space
+    if computer_move == randint:
+        print('Failed')
+    else:
+        print('Passed')
+    if computer_move == player_move:
+        print('Failed')
+    elif computer_move == '*' or randint == '*':
+        print('Failed')
+    else:
+        print('Passed')
+
+
+# function should load the board
+def load_game(file):
+    return None
+
+def test_load_game(file):
+    with open(file) as read_file:
+        print(read_file.readlines)
+
+    # makes sure the file exists
+    if read_file(file).is_file():
+        print('Passed')
+    else:
+        print('Failed')
+
+
+
+# saves the game
+
+def save_game():
+    return None
+
+def test_save_game():
+
+    'moves player move to location, searches for 4 in a row'
+
+def play_game():
+    return None
+
+
+
+def test_play_game(move):
+    # test for valid location
+
+    if move == '.' or move == '':
+        print('Passed')
+    else:
+        print('Failed')
+
+    for element in range(len(lo
